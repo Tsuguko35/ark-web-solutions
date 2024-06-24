@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --title: #444343;
+  --text: #181717;
+  --label: #606060;
+  --primary: #f0e5cf;
+  --secondary: #c8c6c6;
+  --background: #f7f6f2;
+  --accent: #4b6587;
+  --accent-2: #B9CFEC;
+
+  --hero-overlay: rgba(68, 67, 67, 0.25);
+}
+
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: "Montserrat";
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--background);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 20px;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+/* Remove arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove arrows in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Internet Explorer 10+ */
+input[type="number"] {
+  -ms-appearance: textfield;
+}
+
+.accent2{
+    color: var(--accent-2);
+}
