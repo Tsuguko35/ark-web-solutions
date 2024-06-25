@@ -1,5 +1,5 @@
 import React from "react";
-import { LandingPageHeader } from "../components";
+import { Footer, LandingPageHeader } from "../components";
 import LandingPageContent from "../components/LandingPage/LandingPageContent";
 
 function LandingPage() {
@@ -10,6 +10,9 @@ function LandingPage() {
 
       {/* Content */}
       <LandingPageContent />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

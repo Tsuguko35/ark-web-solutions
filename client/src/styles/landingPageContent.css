@@ -184,6 +184,22 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+#landingPageContent > .wrapper > .design-carousel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-top: 2px solid var(--title);
+    padding: 50px 0;
+}
+
+#landingPageContent > .wrapper > .design-carousel > .title{
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--title);
+}
+
 #landingPageContent > .wrapper > .vision{
     width: 100%;
     display: flex;
@@ -197,7 +213,6 @@
     align-items: center;
     gap: 40px;
     padding: 30px 0px;
-    border-top: 2px solid var(--text);
     border-bottom: 2px solid var(--text);
 }
 
@@ -349,6 +364,38 @@
     font-weight: 400;
 }
 
+#landingPageContent > .wrapper > .customers-review{
+    width: 100%;
+    padding: 30px 0px;
+    border-top: 2px solid var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#landingPageContent > .wrapper > .customers-review > .text,
+#landingPageContent > .wrapper > .customers-review > .carousel{
+    width: 50%;
+}
+
+#landingPageContent > .wrapper > .customers-review > .text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .customers-review > .text > .title{
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--title);
+}
+
+#landingPageContent > .wrapper > .customers-review > .text > .label{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
 @media only screen and (max-width: 1270px){
     #landingPageContent > .wrapper > .flex-text > .main > p{
         font-size: 30px;
@@ -395,6 +442,24 @@
 
     #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .label{
         font-size: 24px;
+    }
+
+    #landingPageContent > .wrapper > .customers-review > .text{
+        width: 60%;
+    }
+    #landingPageContent > .wrapper > .customers-review > .carousel{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    #landingPageContent > .wrapper > .customers-review{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #landingPageContent > .wrapper > .customers-review > .text,
+    #landingPageContent > .wrapper > .customers-review > .carousel{
+        width: 100%;
     }
 }
 
@@ -488,11 +553,14 @@
         font-size: 16px;
     }
 
-    #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p, #landingPageContent > .wrapper > .vision > .benefits > .title{
+    #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p, 
+    #landingPageContent > .wrapper > .vision > .benefits > .title,
+    #landingPageContent > .wrapper > .customers-review > .text > .title{
         font-size: 36px;
     }
 
-    #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .desc{
+    #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .desc,
+    #mySwiper .card > .review-container > .review{
         font-size: 14px;
     }
 

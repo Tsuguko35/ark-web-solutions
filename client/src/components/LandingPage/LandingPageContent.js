@@ -4,6 +4,8 @@ import "../../styles/landingPageContent.css";
 import { GetWindowWidth, programs_1, programs_2, projects } from "../../utils";
 
 import { FiArrowDownRight } from "react-icons/fi";
+import ClientReviews from "../Reusable/ClientReviews";
+import DesignCarousel from "../Reusable/DesignCarousel";
 
 function LandingPageContent() {
   const windowWidth = GetWindowWidth();
@@ -87,6 +89,11 @@ function LandingPageContent() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="design-carousel">
+          <p className="title">Design Works</p>
+          <DesignCarousel />
         </div>
 
         <div className="vision">
@@ -182,6 +189,22 @@ function LandingPageContent() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="customers-review">
+          <div className="text">
+            <p className="title">
+              Don't just take my word for it. Here is what others have to say...
+            </p>
+            <p className="label">
+              My superpower is communication. Clear communication has lead to
+              some of the most fruitful engagements. Expectations were managed
+              well and timelines were met.
+            </p>
+          </div>
+          <div className="carousel">
+            <ClientReviews />
           </div>
         </div>
       </div>
