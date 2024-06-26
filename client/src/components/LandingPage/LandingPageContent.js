@@ -15,7 +15,7 @@ function LandingPageContent() {
   return (
     <div id="landingPageContent" className="landingPageContent">
       <div className="wrapper">
-        <div className="section-label">
+        <div id="_About" className="section-label sections">
           <p>About</p>
         </div>
 
@@ -68,7 +68,7 @@ function LandingPageContent() {
           <p>Works</p>
         </div>
 
-        <div className="projects">
+        <div id="_Projects" className="projects sections">
           <p className="title">Selected Works</p>
           {projects.map((project, index) => (
             <div className="project" key={index}>
@@ -96,7 +96,7 @@ function LandingPageContent() {
           <DesignCarousel />
         </div>
 
-        <div className="vision">
+        <div id="_Vision" className="vision sections">
           <div className="vision-header">
             <div className="text-content">
               <p>Helping you thrive in the digital world</p>
@@ -192,7 +192,7 @@ function LandingPageContent() {
           </div>
         </div>
 
-        <div className="customers-review">
+        <div id="_Clients" className="customers-review sections">
           <div className="text">
             <p className="title">
               Don't just take my word for it. Here is what others have to say...

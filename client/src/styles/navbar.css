@@ -51,17 +51,20 @@
     gap: 30px;
 }
 
-#navbar > .nav-links > a{
+#navbar > .nav-links > span{
     display: flex;
+    border: none;
     align-items: center;
     justify-content: center;
     width: 60px;
     color: var(--background);
     font-weight: 400;
     transition: all 250ms ease-in-out;
+    cursor: pointer;
 }
 
-#navbar > .nav-links > a:hover{
+#navbar > .nav-links > span:hover,
+#navbar > .nav-links > span.active{
     color: var(--accent-2);
 }
 

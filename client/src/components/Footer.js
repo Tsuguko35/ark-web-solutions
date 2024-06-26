@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer id="footer" className="footer">
       <div className="wrapper">
-        <div className="contact-details">
+        <div id="_Contact" className="contact-details sections">
           <div className="label">
             <div className="width-image">
               <img

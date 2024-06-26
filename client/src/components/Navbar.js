@@ -7,14 +7,27 @@ import { GetWindowWidth } from "../utils";
 function Navbar() {
   const windowWidth = GetWindowWidth();
   const prevScrollY = useRef(0);
-  const [open, setOpen] = useState(true);
-  const [miniOpen, setMiniOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (windowWidth <= 768) {
-      setOpen(false);
+    if (windowWidth > 768) {
+      setOpen(true);
     }
   }, []);
+
+  const handleScrollSection = (id) => {
+    const navbarHeight = 30;
+    const topic = document.getElementById(id);
+
+    if (topic) {
+      const topOffset =
+        topic.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      window.scrollTo({
+        top: topOffset,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -37,17 +50,46 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    handleScroll();
+  }, []);
+
   return (
     <nav id="navbar" className={`navbar ${!open ? "close" : ""}`}>
       <div className="icon" onClick={() => setOpen(!open)}>
         <RxHamburgerMenu />
       </div>
       <div className="nav-links">
-        <Link className="nav-item">About</Link>
-        <Link className="nav-item">Projects</Link>
-        <Link className="nav-item">Vision</Link>
-        <Link className="nav-item">Clients</Link>
-        <Link className="nav-item">Contact</Link>
+        <span
+          className="nav-item"
+          onClick={() => handleScrollSection("_About")}
+        >
+          About
+        </span>
+        <span
+          className="nav-item"
+          onClick={() => handleScrollSection("_Projects")}
+        >
+          Projects
+        </span>
+        <span
+          className="nav-item"
+          onClick={() => handleScrollSection("_Vision")}
+        >
+          Vision
+        </span>
+        <span
+          className="nav-item"
+          onClick={() => handleScrollSection("_Clients")}
+        >
+          Clients
+        </span>
+        <span
+          className="nav-item"
+          onClick={() => handleScrollSection("_Contact")}
+        >
+          Contact
+        </span>
       </div>
     </nav>
   );
