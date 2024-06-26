@@ -127,7 +127,7 @@ function LandingPageContent() {
           <div className="profile">
             <div className="image">
               <img
-                src="https://res.cloudinary.com/dkwgg59ur/image/upload/v1719231665/Ark_Web_Servces_Files/mmblntlyhnkmnraaeicl.webp"
+                src="https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444629/Portfolio_Files/rkmyfbnrsp7udyajdwno.webp"
                 alt="image"
               />
             </div>

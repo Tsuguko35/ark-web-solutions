@@ -305,6 +305,7 @@
     max-height: 632px;
     object-fit: cover;
     object-position: center top;
+    border-radius: 5px;
 }
 
 #landingPageContent > .wrapper > .vision > .profile > .details{

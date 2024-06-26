@@ -13,6 +13,14 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 function DesignCarousel() {
+  const images = [
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444781/Portfolio_Files/Design%20Works/vclnffixfdtviathwqbm.webp",
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444782/Portfolio_Files/Design%20Works/hmapezph8yxfwaehltei.webp",
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444782/Portfolio_Files/Design%20Works/pdp31mcavof2bod9sxgx.webp",
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444781/Portfolio_Files/Design%20Works/pene8ucno808xkzz7gnd.webp",
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444781/Portfolio_Files/Design%20Works/fl9yptzjs3dvcqwivka4.webp",
+    "https://res.cloudinary.com/dkwgg59ur/image/upload/v1719444780/Portfolio_Files/Design%20Works/svrobopga4kds5blrdhj.webp",
+  ];
   return (
     <Swiper
       id="designCarousel"
@@ -32,33 +40,11 @@ function DesignCarousel() {
       modules={[EffectCoverflow, Pagination]}
       className="designCarousel"
     >
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-      </SwiperSlide>
+      {images.map((image) => (
+        <SwiperSlide>
+          <img src={image} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
