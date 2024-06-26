@@ -61,6 +61,7 @@
     font-weight: 400;
     transition: all 250ms ease-in-out;
     cursor: pointer;
+    user-select: none;
 }
 
 #navbar > .nav-links > span:hover,
