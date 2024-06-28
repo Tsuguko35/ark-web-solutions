@@ -75,11 +75,70 @@
     gap: 15px;
 }
 
+#contactForm > .inputs > .section > .section-inputs > .labels{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .budget{
+    color: var(--background);
+    font-weight: 600;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency > .currency-toggle{
+    color: var(--background);
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency > .currency-toggle.active{
+    font-weight: 600;
+    font-size: 16px;
+}
+
 #contactForm > .inputs > .section > .section-inputs > .side-by-side{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+}
+
+#contactForm .custom-range {
+    --c: var(--accent); /* active color */
+    --g: 0px; /* the gap */
+    --l: 7px; /* line thickness*/
+    --s: 30px; /* thumb size*/
+    
+    width: 100%;
+    height: var(--s); /* needed for Firefox*/
+    -webkit-appearance :none;
+    -moz-appearance :none;
+    appearance :none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type="range" i]::-webkit-slider-thumb{
+    height: var(--s);
+    width: 15px;
+    background-color: var(--accent);
+    aspect-ratio: 1;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-image: linear-gradient(90deg,var(--c) 50%,var(--background) 0) 0 1/calc(50% - var(--l)/2) 100dvw/0 calc(100dvw + var(--g)); 
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 #contactForm > .inputs .custom-input,

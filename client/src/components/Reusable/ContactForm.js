@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import "../../styles/contactForm.css";
 
 function ContactForm() {
-  const formData = useState({
-    budget_range: "",
+  const [formData, setFormData] = useState({
+    budget_range: 100,
   });
+  const [currency, setCurrency] = useState("usd");
+
+  const convertBudget = (budget) => {
+    if (currency === "usd") {
+      return budget;
+    } else if (currency === "php") {
+      const converted_budget = budget * 50;
+      return converted_budget;
+    }
+  };
   return (
     <form id="contactForm" className="contactForm">
       <div className="header">
@@ -46,7 +56,7 @@ function ContactForm() {
         <div className="section">
           <p className="section-label">What budget range are you in?</p>
           <div className="section-inputs">
-            <div className="side-by-side">
+            {/* <div className="side-by-side">
               <div className="custom-radio">
                 <input name="radio" id="radio1" type="radio" />
                 <label for="radio1">$200 - $400</label>
@@ -65,7 +75,42 @@ function ContactForm() {
                 <input name="radio" id="radio4" type="radio" />
                 <label for="radio4">$800 - $1000+</label>
               </div>
+            </div> */}
+            <div className="labels">
+              <p className="budget">
+                Budget: {currency === "usd" ? "$" : "₱"}
+                {convertBudget(formData.budget_range)}
+              </p>
+              <div className="curency">
+                <span
+                  className={`currency-toggle ${
+                    currency === "usd" ? "active" : ""
+                  }`}
+                  onClick={() => setCurrency("usd")}
+                >
+                  USD
+                </span>
+                <span
+                  className={`currency-toggle ${
+                    currency === "php" ? "active" : ""
+                  }`}
+                  onClick={() => setCurrency("php")}
+                >
+                  PHP
+                </span>
+              </div>
             </div>
+            <input
+              type="range"
+              step={100}
+              className="custom-range"
+              value={formData.budget_range}
+              onChange={(e) =>
+                setFormData({ ...formData, budget_range: e.target.value })
+              }
+              min={100}
+              max={1000}
+            />
           </div>
         </div>
 
