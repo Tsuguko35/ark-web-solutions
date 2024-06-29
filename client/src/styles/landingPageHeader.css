@@ -134,20 +134,22 @@
     color: var(--accent-2);
 }
 
-#landingPageHeader > .wrapper > .action > a{
+#landingPageHeader > .wrapper > .action > button{
     display: flex;
     width: 170px;
     height: 45px;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--background);
+    border: 2px solid var(--background);
     border-radius: 12px;
     color: var(--background);
+    background-color: transparent;
     font-weight: 500;
     transition: all 250ms ease-in-out;
+    cursor: pointer;
 }
 
-#landingPageHeader > .wrapper > .action > a:hover{
+#landingPageHeader > .wrapper > .action > button:hover{
     background-color: var(--background);
     color: var(--label);
 }

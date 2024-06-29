@@ -2,32 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { GetWindowWidth } from "../utils";
+import { GetWindowWidth, handleScrollSection } from "../utils";
 
 function Navbar() {
   const windowWidth = GetWindowWidth();
   const prevScrollY = useRef(0);
   const [open, setOpen] = useState(false);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
     if (windowWidth > 768) {
       setOpen(true);
     }
   }, []);
-
-  const handleScrollSection = (id) => {
-    const navbarHeight = 30;
-    const topic = document.getElementById(id);
-
-    if (topic) {
-      const topOffset =
-        topic.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-      window.scrollTo({
-        top: topOffset,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -54,8 +41,26 @@ function Navbar() {
     handleScroll();
   }, []);
 
+  const handleClickOutside = (event) => {
+    if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav id="navbar" className={`navbar ${!open ? "close" : ""}`}>
+    <nav
+      ref={navbarRef}
+      id="navbar"
+      className={`navbar ${!open ? "close" : ""}`}
+    >
       <div className="icon" onClick={() => setOpen(!open)}>
         <RxHamburgerMenu />
       </div>

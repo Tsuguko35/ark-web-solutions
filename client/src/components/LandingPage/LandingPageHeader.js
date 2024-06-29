@@ -11,6 +11,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { handleScrollSection } from "../../utils";
 
 function LandingPageHeader() {
   return (
@@ -55,7 +56,9 @@ function LandingPageHeader() {
         </div>
 
         <div className="action">
-          <Link>Contact Us</Link>
+          <button onClick={() => handleScrollSection("_Contact")}>
+            Contact Us
+          </button>
         </div>
       </div>
       <div className="side-detail">
