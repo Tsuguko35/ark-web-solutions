@@ -1,0 +1,279 @@
+#contactForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+    gap: 50px;
+}
+
+#contactForm > .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#contactForm > .header > .title{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--background);
+}
+
+#contactForm > .header > .label{
+    font-weight: 300;
+    text-align: center;
+    color: var(--background);
+}
+
+#contactForm > .inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#contactForm > .inputs > .section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#contactForm > .inputs > .section > .section-label{
+    color: var(--background);
+    font-size: 20px;
+}
+
+#contactForm > .inputs > .section > .section-label.mini{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+#contactForm > .inputs > .section > .submit-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#contactForm > .inputs > .section > .submit-area > .submit-text{
+    padding: 5px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8f7c8;
+    border: 1px solid #93C572;
+    color: green;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#contactForm > .inputs > .section > .submit-area > .submit-text.error{
+    padding: 5px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2D2D4;
+    border: 1px solid #FA5F55;
+    color: #FA5F55;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#contactForm > .inputs > .section > .submit-area > button{
+    width: 200px;
+    height: 48px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    color: var(--background);
+}
+
+#contactForm > .inputs > .section > .submit-area > button:hover{
+    opacity: 0.7;
+}
+
+#contactForm > .inputs > .section > .section-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .budget{
+    color: var(--background);
+    font-weight: 600;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency > .currency-toggle{
+    color: var(--background);
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .labels > .curency > .currency-toggle.active{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#contactForm > .inputs > .section > .section-inputs > .side-by-side{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#contactForm .custom-range {
+    --c: var(--accent); /* active color */
+    --g: 0px; /* the gap */
+    --l: 7px; /* line thickness*/
+    --s: 30px; /* thumb size*/
+    
+    width: 100%;
+    height: var(--s); /* needed for Firefox*/
+    -webkit-appearance :none;
+    -moz-appearance :none;
+    appearance :none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type="range" i]::-webkit-slider-thumb{
+    height: var(--s);
+    width: 15px;
+    background-color: var(--accent);
+    aspect-ratio: 1;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-image: linear-gradient(90deg,var(--c) 50%,var(--background) 0) 0 1/calc(50% - var(--l)/2) 100dvw/0 calc(100dvw + var(--g)); 
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#contactForm > .inputs .custom-input,
+#contactForm .custom-select{
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0 20px;
+    background-color: var(--background);
+    color: var(--title);
+    font-weight: 300;
+}
+
+#contactForm > .inputs .custom-input:focus-visible{
+    border-color: var(--accent);
+}
+
+#contactForm .custom-textarea{
+    height: 220px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px 20px;
+    background-color: var(--background);
+    color: var(--title);
+    font-weight: 300;
+    resize: none;
+}
+
+#contactForm .custom-radio [type="radio"] {
+	display: none;
+}
+#contactForm .custom-radio label {
+	display: block;
+	padding: 20px 60px;
+	background: var(--background);
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	min-width: 250px;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+}
+#contactForm .custom-radio label:after,
+#contactForm .custom-radio label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+#contactForm .custom-radio label:after {
+	height: 19px;
+	width: 19px;
+	border: 2px solid var(--title);
+	left: 21px;
+	top: calc(50% - 10px);
+}
+#contactForm .custom-radio label:before {
+	background: var(--title);
+	height: 19px;
+	width: 19px;
+	left: 21px;
+	top: calc(50% - 10px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+#contactForm .custom-radio [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(0.6);
+}
+
+@media only screen and (max-width: 1024px){
+    #contactForm{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #contactForm > .inputs > .section > .section-inputs > .side-by-side{
+        grid-template-columns: 1fr;
+    }
+
+    #contactForm > .header > .title{
+        font-size: 24px;
+    }
+
+    #contactForm > .header > .label{
+        font-size: 14px;
+    }
+
+    #contactForm > .inputs > .section > .section-label{
+        font-size: 16px;
+    }
+
+    #contactForm > .inputs .custom-input, #contactForm .custom-select{
+        height: 50px;
+    }
+}

@@ -1,0 +1,562 @@
+#landingPageContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landingPageContent > .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1536px;
+    height: 100%;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#landingPageContent > .wrapper > .section-label{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--text);
+}
+
+#landingPageContent > .wrapper > .section-label > p{
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#landingPageContent > .wrapper > .flex-text{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#landingPageContent > .wrapper > .flex-text > .main{
+    width: 60%;
+}
+
+#landingPageContent > .wrapper > .flex-text > .main > p{
+    color: var(--title);
+    font-size: 32px;
+    font-weight: 500;
+    text-align: justify;
+    max-width: 637px;
+}
+
+#landingPageContent > .wrapper > .flex-text > .sub{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .flex-text > .sub > p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#landingPageContent > .wrapper > .flex-text > .sub > p.title{
+    width: 100%;
+    text-align: end;
+    font-size: 24px;
+    color: var(--title);
+    font-weight: 600;
+}
+
+#landingPageContent > .wrapper > .flex-text > .sub > .images{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+#landingPageContent > .wrapper > .flex-text > .sub > .images > img{
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+#landingPageContent > .wrapper > .program-images{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#landingPageContent > .wrapper > .program-images > img{
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+#landingPageContent > .wrapper > .projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .projects > .title{
+    color: var(--title);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+#landingPageContent > .wrapper > .projects > .project{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#landingPageContent > .wrapper > .projects > .project:not(:last-child){
+    border-bottom: 2px solid var(--text);
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details{
+    width: 40%;
+    height: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > .text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > .text-content > p{
+    max-width: 420px;
+    color: var(--text);
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > .text-content > .name{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > .text-content > .desc{
+    font-weight: 500;
+    text-align: justify;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > .text-content > .label{
+    color: var(--label);
+}
+
+#landingPageContent > .wrapper > .projects > .project > .preview{
+    width: 60%;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .details > a{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .preview{
+    display: flex;
+    align-items: center;
+}
+
+#landingPageContent > .wrapper > .projects > .project > .preview > img{
+    width: 100%;
+    height: auto;
+    max-height: 364px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+#landingPageContent > .wrapper > .design-carousel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-top: 2px solid var(--title);
+    padding: 50px 0;
+}
+
+#landingPageContent > .wrapper > .design-carousel > .title{
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--title);
+}
+
+#landingPageContent > .wrapper > .vision{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0px;
+    border-bottom: 2px solid var(--text);
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .text-content{
+    width: 60%;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .logo{
+    width: 40%;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .text-content > p{
+    color: var(--title);
+    font-size: 64px;
+    font-weight: 600;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .logo{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .logo > .img-holder{
+    width: 180px;
+    height: 180px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(65%);
+}
+
+#landingPageContent > .wrapper > .vision > .vision-header > .logo > .img-holder > img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-quote{
+    display: flex;
+    align-items: flex-start;
+    height: 140px;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-quote > .icon > svg{
+    width: 60px;
+    height: 60px;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-quote > .icon > svg *{
+    color: var(--accent);
+}
+
+#landingPageContent > .wrapper > .vision > .vision-quote > .text{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#landingPageContent > .wrapper > .vision > .vision-quote > .text > p{
+    font-size: 20px;
+    max-width: 406px;
+}
+
+#landingPageContent > .wrapper > .vision > .profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#landingPageContent > .wrapper > .vision > .profile > .image,
+#landingPageContent > .wrapper > .vision > .profile > .details{
+    width: 50%;
+}
+
+#landingPageContent > .wrapper > .vision > .profile > .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landingPageContent > .wrapper > .vision > .profile > .image > img{
+    width: 100%;
+    max-width: 585px;
+    height: 100%;
+    max-height: 632px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px;
+}
+
+#landingPageContent > .wrapper > .vision > .profile > .details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .vision > .profile > .details > p{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+#landingPageContent > .wrapper > .benefits{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .benefits > .title{
+    font-size: 64px;
+    color: var(--title);
+    font-weight: 600;
+}
+
+#landingPageContent > .wrapper > .benefits > .benefits-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .number{
+    padding: 10px 0px;
+    font-size: 20px;
+    color: var(--title);
+    font-weight: 500;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .label{
+    font-size: 36px;
+    color: var(--title);
+    font-weight: 500;
+}
+
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .desc{
+    font-weight: 400;
+}
+
+#landingPageContent > .wrapper > .customers-review{
+    width: 100%;
+    padding: 30px 0px;
+    border-top: 2px solid var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#landingPageContent > .wrapper > .customers-review > .text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#landingPageContent > .wrapper > .customers-review > .text > .title{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--title);
+}
+
+#landingPageContent > .wrapper > .customers-review > .text > .label{
+    text-align: center;
+    font-size: 14px;
+    max-width: 1000px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+@media only screen and (max-width: 1270px){
+    #landingPageContent > .wrapper > .flex-text > .main > p{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1161px){
+    #landingPageContent > .wrapper > .flex-text{
+        flex-direction: column;
+    }
+
+    #landingPageContent > .wrapper > .flex-text > .main,
+    #landingPageContent > .wrapper > .flex-text > .sub{
+        width: 100%;
+    }
+
+    #landingPageContent > .wrapper > .flex-text > .main > p{
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    #landingPageContent > .wrapper{
+        padding: 50px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p,
+    #landingPageContent > .wrapper > .benefits > .title{
+        font-size: 46px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .logo > .img-holder{
+        height: 150px;
+        width: 150px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-quote > .text > p{
+        font-size: 18px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .profile > .details > p{
+        font-size: 20px;
+    }
+
+    #landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .label{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    #landingPageContent > .wrapper > .customers-review{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #landingPageContent > .wrapper > .flex-text > .main > p{
+        font-size: 26px;
+    }
+
+    #landingPageContent > .wrapper > .flex-text > .sub > p.title{
+        text-align: center;
+    }
+
+    #landingPageContent > .wrapper > .program-images{
+        justify-content: center;
+    }
+
+    #landingPageContent > .wrapper > .projects > .project{
+        flex-direction: column-reverse;
+    }
+
+    #landingPageContent > .wrapper > .projects > .project > .preview,
+    #landingPageContent > .wrapper > .projects > .project > .details{
+        width: 100%;
+        min-height: 0;
+    }
+
+    #landingPageContent > .wrapper > .projects > .project > .details > .text-content > p{
+        max-width: none;
+    }
+
+    #landingPageContent > .wrapper > .vision > .profile{
+        flex-direction: column;
+    }
+
+    #landingPageContent > .wrapper > .vision > .profile > .image, 
+    #landingPageContent > .wrapper > .vision > .profile > .details{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #landingPageContent > .wrapper > .benefits > .benefits-grid{
+        grid-template-columns: 1fr;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header{
+        flex-direction: column;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .text-content,
+    #landingPageContent > .wrapper > .vision > .vision-header > .logo{
+        width: 100%;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .logo > .img-holder{
+        transform: none;
+    }
+
+    #landingPageContent > .wrapper > .vision > .profile > .image > img{
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 485px){
+    #landingPageContent > .wrapper > .projects > .title{
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    #landingPageContent > .wrapper{
+        padding: 20px;
+    }
+
+    #landingPageContent > .wrapper > .flex-text > .main > p,
+    #landingPageContent > .wrapper > .flex-text > .sub > p{
+        text-align: center;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p{
+        text-align: center;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .logo{
+        justify-content: center;
+        padding: 0;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-quote > .text > p,
+    #landingPageContent > .wrapper > .vision > .profile > .details > p{
+        font-size: 16px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p, 
+    #landingPageContent > .wrapper > .benefits > .title,
+    #landingPageContent > .wrapper > .customers-review > .text > .title{
+        font-size: 36px;
+    }
+
+    #landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .desc,
+    #mySwiper .card > .review-container > .review{
+        font-size: 14px;
+    }
+
+    #landingPageContent > .wrapper > .vision > .vision-quote{
+        height: 120px;
+    }
+}
