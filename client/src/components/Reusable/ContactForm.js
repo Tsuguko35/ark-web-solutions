@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "../../styles/contactForm.css";
+import { CircleLoading } from "../../assets";
 
 function ContactForm() {
   const form = useRef();
@@ -30,12 +31,13 @@ function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
     setSubmit(true);
+    setSubmitStatus(null);
     emailjs
       .sendForm(
-        "service_xu0d3nt",
-        "template_8bogi4k",
+        "service_rbmwlxh",
+        "template_9mk9vm8",
         form.current,
-        "gcINKDKWf3CJtT1Pa"
+        "OyMZMW4vPOxQzm-RX"
       )
       .then(
         () => {
@@ -51,12 +53,10 @@ function ContactForm() {
             timeline: "",
             client_message: "",
           });
-          console.log("SUCCESS!");
         },
         (error) => {
           setSubmit(false);
           setSubmitStatus("error");
-          console.log("FAILED...", error.text);
         }
       );
   };
@@ -174,8 +174,9 @@ function ContactForm() {
               value={formData.budget_range_holder}
               onChange={handleChange}
               min={100}
-              max={1000}
+              max={5000}
               disabled={submit}
+              required
             />
           </div>
         </div>
@@ -189,6 +190,7 @@ function ContactForm() {
               value={formData.timeline}
               className="custom-select"
               disabled={submit}
+              required
             >
               <option value="" disabled>
                 Select timeline
@@ -196,6 +198,13 @@ function ContactForm() {
               <option value="1 Month">1 Month</option>
               <option value="2 Months">2 Months</option>
               <option value="3 Months">3 Months</option>
+              <option value="4 Months">4 Months</option>
+              <option value="5 Months">5 Months</option>
+              <option value="6 Months">6 Months</option>
+              <option value="7 Months">7 Months</option>
+              <option value="8 Months">8 Months</option>
+              <option value="9 Months">9 Months</option>
+              <option value="10 Months">10 Months</option>
             </select>
             <textarea
               name="client_message"
@@ -204,6 +213,7 @@ function ContactForm() {
               className="custom-textarea"
               placeholder="Hello, I’m looking for a designer to help me out with..."
               disabled={submit}
+              required
             ></textarea>
           </div>
         </div>
@@ -213,9 +223,17 @@ function ContactForm() {
             We promise to never sell your personal information or give it to
             anyone, for any reason.
           </p>
-          <button type="submit" disabled={submit}>
-            Submit
-          </button>
+          <div className="submit-area">
+            <button type="submit" disabled={submit}>
+              {submit ? <CircleLoading /> : "Submit"}
+            </button>
+            {submitStatus === "success" && (
+              <p className="submit-text">Message Sent!</p>
+            )}
+            {submitStatus === "error" && (
+              <p className="submit-text error">An Error Occured</p>
+            )}
+          </div>
         </div>
       </div>
     </form>

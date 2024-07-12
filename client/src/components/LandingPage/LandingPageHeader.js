@@ -37,7 +37,7 @@ function LandingPageHeader() {
           </p>
         </div>
 
-        <div className="socials">
+        {/* <div className="socials">
           <Link>
             <FaFacebookSquare />
           </Link>
@@ -53,7 +53,7 @@ function LandingPageHeader() {
           <Link>
             <FaYoutube />
           </Link>
-        </div>
+        </div> */}
 
         <div className="action">
           <button onClick={() => handleScrollSection("_Contact")}>

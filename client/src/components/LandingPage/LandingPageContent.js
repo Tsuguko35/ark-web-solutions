@@ -15,6 +15,40 @@ function LandingPageContent() {
   return (
     <div id="landingPageContent" className="landingPageContent">
       <div className="wrapper">
+        <div className="benefits">
+          <p className="title">We can help you with.. </p>
+          <div className="benefits-grid">
+            <div className="benefit">
+              <p className="number">01</p>
+              <p className="label">Design</p>
+              <p className="desc">
+                With a solid track record in designing websites, We deliver
+                strong and user-friendly digital designs. (Since 2020 only in
+                combination with development)
+              </p>
+            </div>
+
+            <div className="benefit">
+              <p className="number">02</p>
+              <p className="label">Development</p>
+              <p className="desc">
+                We build scalable websites from scratch that fit seamlessly with
+                design. My focus is on micro animations, transitions and
+                interaction. Build with Kirby CMS or Webflow.
+              </p>
+            </div>
+
+            <div className="benefit">
+              <p className="number">03</p>
+              <p className="label">The Full Package</p>
+              <p className="desc">
+                A complete website from concept to implementation, that's what
+                makes me stand out. My great sense for design and my development
+                skills enable me to create projects.
+              </p>
+            </div>
+          </div>
+        </div>
         <div id="_About" className="section-label sections">
           <p>About</p>
         </div>
@@ -117,8 +151,8 @@ function LandingPageContent() {
 
             <div className="text">
               <p>
-                I help companies from all over the world with tailor-made
-                solutions. With each project, I push my work to new horizons,
+                We help companies from all over the world with tailor-made
+                solutions. With each project, We push my work to new horizons,
                 always putting quality first.
               </p>
             </div>
@@ -155,41 +189,6 @@ function LandingPageContent() {
               </p>
             </div>
           </div>
-
-          <div className="benefits">
-            <p className="title">I can help you with.. </p>
-            <div className="benefits-grid">
-              <div className="benefit">
-                <p className="number">01</p>
-                <p className="label">Design</p>
-                <p className="desc">
-                  With a solid track record in designing websites, I deliver
-                  strong and user-friendly digital designs. (Since 2020 only in
-                  combination with development)
-                </p>
-              </div>
-
-              <div className="benefit">
-                <p className="number">02</p>
-                <p className="label">Development</p>
-                <p className="desc">
-                  I build scalable websites from scratch that fit seamlessly
-                  with design. My focus is on micro animations, transitions and
-                  interaction. Build with Kirby CMS or Webflow.
-                </p>
-              </div>
-
-              <div className="benefit">
-                <p className="number">03</p>
-                <p className="label">The Full Package</p>
-                <p className="desc">
-                  A complete website from concept to implementation, that's what
-                  makes me stand out. My great sense for design and my
-                  development skills enable me to create projects.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div id="_Clients" className="customers-review sections">
@@ -203,9 +202,12 @@ function LandingPageContent() {
               well and timelines were met.
             </p>
           </div>
-          <div className="carousel">
-            <ClientReviews />
-          </div>
+          <iframe
+            src="https://widget.tagembed.com/156307?view"
+            style={{ width: "100%", height: "700px", overflow: "auto" }}
+            frameborder="0"
+            allowtransparency="true"
+          ></iframe>
         </div>
       </div>
     </div>

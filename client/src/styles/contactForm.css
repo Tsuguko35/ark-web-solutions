@@ -53,18 +53,53 @@
     font-weight: 300;
 }
 
-#contactForm > .inputs > .section > button{
+
+#contactForm > .inputs > .section > .submit-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#contactForm > .inputs > .section > .submit-area > .submit-text{
+    padding: 5px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8f7c8;
+    border: 1px solid #93C572;
+    color: green;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#contactForm > .inputs > .section > .submit-area > .submit-text.error{
+    padding: 5px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2D2D4;
+    border: 1px solid #FA5F55;
+    color: #FA5F55;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#contactForm > .inputs > .section > .submit-area > button{
     width: 200px;
     height: 48px;
     background-color: var(--accent);
     border: none;
-    border-radius: 12px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 250ms ease-in-out;
     color: var(--background);
 }
 
-#contactForm > .inputs > .section > button:hover{
+#contactForm > .inputs > .section > .submit-area > button:hover{
     opacity: 0.7;
 }
 

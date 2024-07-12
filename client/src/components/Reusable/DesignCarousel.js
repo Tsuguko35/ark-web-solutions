@@ -10,7 +10,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 function DesignCarousel() {
   const images = [
@@ -35,9 +35,10 @@ function DesignCarousel() {
         modifier: 1,
         slideShadows: true,
       }}
+      autoplay={{ delay: 4000 }}
       loop={true}
       pagination={{ clickable: true }}
-      modules={[EffectCoverflow, Pagination]}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
       className="designCarousel"
     >
       {images.map((image) => (

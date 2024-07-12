@@ -28,11 +28,11 @@ function Footer() {
           </div>
           <div className="contact-info">
             <div className="contact">
-              <p>jayson.batoon@bulsu.edu.ph</p>
+              <p>jaysonbatoon0211@gmail.com</p>
               <p>+63 999-873-3212</p>
             </div>
             <div className="socials">
-              <div className="links">
+              {/* <div className="links">
                 <Link>
                   <FaFacebookSquare />
                 </Link>
@@ -48,9 +48,9 @@ function Footer() {
                 <Link>
                   <FaYoutube />
                 </Link>
-              </div>
+              </div> */}
 
-              <button className="cv">Download CV</button>
+              <button className="cv">Download Portfolio</button>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import ClientReviews from "./Reusable/ClientReviews";
 import Footer from "./Footer";
 import ContactForm from "./Reusable/ContactForm";
 import DesignCarousel from "./Reusable/DesignCarousel";
+import FacebookMsg from "./FacebookMsg";
 
 export {
   LandingPageHeader,
@@ -12,4 +13,5 @@ export {
   Footer,
   ContactForm,
   DesignCarousel,
+  FacebookMsg,
 };

@@ -154,6 +154,7 @@
 
 #landingPageContent > .wrapper > .projects > .project > .details > .text-content > .desc{
     font-weight: 500;
+    text-align: justify;
 }
 
 #landingPageContent > .wrapper > .projects > .project > .details > .text-content > .label{
@@ -320,34 +321,34 @@
     text-align: justify;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits{
+#landingPageContent > .wrapper > .benefits{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .title{
+#landingPageContent > .wrapper > .benefits > .title{
     font-size: 64px;
     color: var(--title);
     font-weight: 600;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .benefits-grid{
+#landingPageContent > .wrapper > .benefits > .benefits-grid{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit{
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .number{
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .number{
     padding: 10px 0px;
     font-size: 20px;
     color: var(--title);
@@ -355,13 +356,13 @@
     border-bottom: 1px solid var(--secondary);
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .label{
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .label{
     font-size: 36px;
     color: var(--title);
     font-weight: 500;
 }
 
-#landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .desc{
+#landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .desc{
     font-weight: 400;
 }
 
@@ -370,29 +371,30 @@
     padding: 30px 0px;
     border-top: 2px solid var(--text);
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
 
-#landingPageContent > .wrapper > .customers-review > .text,
-#landingPageContent > .wrapper > .customers-review > .carousel{
-    width: 50%;
-}
-
 #landingPageContent > .wrapper > .customers-review > .text{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
 #landingPageContent > .wrapper > .customers-review > .text > .title{
-    font-size: 48px;
+    font-size: 32px;
+    text-align: center;
     font-weight: 600;
     color: var(--title);
 }
 
 #landingPageContent > .wrapper > .customers-review > .text > .label{
+    text-align: center;
     font-size: 14px;
+    max-width: 1000px;
     font-weight: 500;
     color: var(--text);
 }
@@ -424,7 +426,7 @@
     }
 
     #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p,
-    #landingPageContent > .wrapper > .vision > .benefits > .title{
+    #landingPageContent > .wrapper > .benefits > .title{
         font-size: 46px;
     }
 
@@ -441,15 +443,8 @@
         font-size: 20px;
     }
 
-    #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .label{
+    #landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .label{
         font-size: 24px;
-    }
-
-    #landingPageContent > .wrapper > .customers-review > .text{
-        width: 60%;
-    }
-    #landingPageContent > .wrapper > .customers-review > .carousel{
-        width: 40%;
     }
 }
 
@@ -457,10 +452,6 @@
     #landingPageContent > .wrapper > .customers-review{
         flex-direction: column;
         gap: 30px;
-    }
-    #landingPageContent > .wrapper > .customers-review > .text,
-    #landingPageContent > .wrapper > .customers-review > .carousel{
-        width: 100%;
     }
 }
 
@@ -502,7 +493,7 @@
 }
 
 @media only screen and (max-width: 767px){
-    #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid{
+    #landingPageContent > .wrapper > .benefits > .benefits-grid{
         grid-template-columns: 1fr;
     }
 
@@ -555,12 +546,12 @@
     }
 
     #landingPageContent > .wrapper > .vision > .vision-header > .text-content > p, 
-    #landingPageContent > .wrapper > .vision > .benefits > .title,
+    #landingPageContent > .wrapper > .benefits > .title,
     #landingPageContent > .wrapper > .customers-review > .text > .title{
         font-size: 36px;
     }
 
-    #landingPageContent > .wrapper > .vision > .benefits > .benefits-grid > .benefit > .desc,
+    #landingPageContent > .wrapper > .benefits > .benefits-grid > .benefit > .desc,
     #mySwiper .card > .review-container > .review{
         font-size: 14px;
     }
